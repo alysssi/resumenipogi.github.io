@@ -214,21 +214,19 @@
         document.body.classList.remove("no-scroll");
       }
 
-
-   navLinks.forEach(link => {
+      navLinks.forEach((link) => {
         link.addEventListener("click", () => {
-            if (header.classList.contains("active")) {
-                header.classList.remove("active"); 
-            }
-        });
-    });
-
-    modal.addEventListener("click", (event) => {
-          if (event.target === modal) {
-            closeModal();
+          if (header.classList.contains("active")) {
+            header.classList.remove("active");
           }
         });
-     
+      });
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
     </script>
   </body>
 </html>
