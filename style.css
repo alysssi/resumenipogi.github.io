@@ -1,0 +1,440 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e1e1e1;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  z-index: 100;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: crimson;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.greet h1 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.pp {
+  margin: 20px 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid crimson;
+}
+
+.pp img {
+  width: 100%;
+  height: 100%;
+}
+
+.name h1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.des p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social a i {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.social a:hover {
+  color: crimson;
+}
+
+.what-i-do {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.what-i-do h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: crimson;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service {
+  max-width: 300px;
+  text-align: center;
+}
+
+.service i {
+  font-size: 50px;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.service p {
+  font-size: 16px;
+}
+
+.about-me {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: crimson;
+}
+
+.about-me p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+ 
+ .projects {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: crimson;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project {
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .project a:hover {
+    color: crimson;
+    transform: scale(1.05);
+  }
+
+  .project:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /* Lightbox Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .skills {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .skills h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: crimson;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .skill {
+    flex: 1 1 250px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill i {
+    font-size: 40px;
+    color: crimson;
+    margin-bottom: 10px;
+  }
+  
+  .skill h3 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .skill p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .skill:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+
+  .contact {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: crimson;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .contact-info i {
+    font-size: 20px;
+    color: crimson;
+    margin-right: 10px;
+  }
+  
+  .contact-info a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: crimson;
+  }
+  
+  .contact-info span {
+    color: #666;
+  }
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header.active .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .header.active .menu a {
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .section1 {
+    height: 100%;
+    padding: 20px;
+  }
+
+  .greet h1 {
+    font-size: 20px;
+  }
+
+  .pp {
+    height: 200px;
+    width: 200px;
+  }
+
+  .name h1 {
+    font-size: 20px;
+  }
+
+  .des p {
+    font-size: 14px;
+  }
+
+  .social a i {
+    font-size: 24px;
+  }
+}
