@@ -14,6 +14,11 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="Rlogo.png" type="image/x-icon" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <div class="header">
@@ -34,170 +39,8 @@
       </div>
     </div>
 
-    <div class="section1">
-      <div class="greet">
-        <h1>Good Day Friend!</h1>
-      </div>
-      <div class="pic">
-        <div class="pp">
-          <img src="ridel.png" alt="Profile Picture" />
-        </div>
-      </div>
-      <div class="name">
-        <h1>Ronson Aguidan Deleña Jr</h1>
-      </div>
-      <div class="des">
-        <p>Back-End Developer</p>
-      </div>
-      <div class="social">
-        <a href="https://www.facebook.com/Jd.Delena21/">
-          <i class="fab fa-facebook-square"></i>
-          <span>Facebook</span>
-        </a>
-        <a href="https://www.instagram.com/jadeemonsterr/">
-          <i class="fab fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
-        <a href="https://www.linkedin.com/in/jd-dele%C3%B1a-391220256/">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="what-i-do" id="what-i-do">
-      <h2>What I Do</h2>
-      <div class="services">
-        <div class="service">
-          <i class="fas fa-code"></i>
-          <h3>Web Development</h3>
-          <p>
-            Creating responsive and dynamic websites using modern technologies.
-          </p>
-        </div>
-        <div class="service">
-          <i class="fas fa-database"></i>
-          <h3>Database Management</h3>
-          <p>
-            Designing and managing efficient databases for storing and
-            retrieving data.
-          </p>
-        </div>
-        <div class="service">
-          <i class="fas fa-cogs"></i>
-          <h3>API Integration</h3>
-          <p>Integrating third-party APIs to enhance website functionality.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-me" id="about-me">
-      <h2>About Me</h2>
-      <p>
-        I am a dedicated back-end developer with strong skills in creating
-        reliable and scalable systems. I also enjoy gaming and am skilled in
-        Dota, Mobile Legends, and Clash of Clans. My confidence in my abilities
-        helps me succeed both in my work and in my hobbies.
-      </p>
-    </div>
-
-    <div class="projects" id="projects">
-      <h2>Projects</h2>
-      <div class="projects-container">
-        <div class="project">
-          <img
-            src="bis123.png"
-            alt="Project 1"
-            onclick="openModal('bis123.png')"
-          />
-          <a
-            href="https://bis.free.nf/BarangayInformationSystem.html"
-            target="_blank"
-            >Barangay Information System</a
-          >
-        </div>
-        <div class="project">
-          <img
-            src="bidwave.png"
-            alt="Project 2"
-            onclick="openModal('bidwave.png')"
-          />
-          <a href="https://bidwave.free.nf/" target="_blank">Bidwave</a>
-        </div>
-        <div class="project">
-          <img src="rnr.png" alt="Project 3" onclick="openModal('rnr.png')" />
-          <a href="http://rnr.free.nf/Login.php" target="_blank">Rnr</a>
-        </div>
-         <div class="project">
-          <img
-            src="lineshub.png"
-            alt="Project 2"
-            onclick="openModal('lineshub.png')"
-          />
-          <a href="http://printlineshub.free.nf/" target="_blank">Lineshub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills" id="skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Web Development</h3>
-          <p>
-            Experienced in HTML, CSS, JavaScript, PHP, and various frameworks.
-          </p>
-        </div>
-        <div class="skill">
-          <i class="fas fa-database"></i>
-          <h3>Database Management</h3>
-          <p>
-            Knowledge in in MySQL, Django, and database design and optimization.
-          </p>
-        </div>
-
-        <div class="skill">
-          <i class="fas fa-tools"></i>
-          <h3>API Integration</h3>
-          <p>
-            Experience integrating and working with various APIs and third-party
-            services.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact" id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-info">
-        <p>
-          If ganahan ka mag chat chat sa akua testinga ra ba ang mga methods
-          below:
-        </p>
-        <ul>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:jdpogi@gmail.com">jdpogi@gmail.com </a>
-          </li>
-          <li>
-            <i class="fas fa-phone"></i>
-            <span>+639696969696969</span>
-          </li>
-          <li>
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Maskin Asa Asa lang </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!--  Modal -->
-    <div id="lightbox" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modal-image" />
-    </div>
-
+    <!-- Rest of your HTML code -->
+    
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
       const header = document.querySelector(".header");
@@ -206,6 +49,14 @@
 
       menuToggle.addEventListener("click", () => {
         header.classList.toggle("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (header.classList.contains("active")) {
+            header.classList.remove("active");
+          }
+        });
       });
 
       function openModal(imageSrc) {
@@ -221,14 +72,6 @@
         modal.style.display = "none";
         document.body.classList.remove("no-scroll");
       }
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (header.classList.contains("active")) {
-            header.classList.remove("active");
-          }
-        });
-      });
 
       modal.addEventListener("click", (event) => {
         if (event.target === modal) {
