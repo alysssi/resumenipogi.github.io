@@ -57,6 +57,7 @@ body {
 .menu a:hover {
   color: crimson;
   transform: scale(1.1); /* Enlarge on hover */
+  transform-origin: left; 
 }
 
 .menu-toggle {
