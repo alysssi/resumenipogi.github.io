@@ -43,12 +43,18 @@
       <div class="greet">
         <h1>Good Day Friend!</h1>
       </div>
-      <div class="pic">
-        <div class="pp">
-          <img src="ridel.png" alt="Profile Picture" />
-        </div>
+    
+        <div class="pic" onclick="flipCard() ">
+          <div class="pp">
+              <div class="front">
+                  <img   class="frontimage" src="ridel.png" alt="Front">
+              </div>
+              <div class="back">
+                  <img class="backimage " src="jd.jpg" alt="Back">
+              </div>
+          </div>
       </div>
-      <div class="name">
+      <div class="name" style="margin-top:30px;">
         <h1>Ronson Aguidan Deleña Jr</h1>
       </div>
       <div class="des">
@@ -239,6 +245,11 @@
           closeModal();
         }
       });
+
+      function flipCard() {
+    const pic = document.querySelector('.pic');
+    pic.classList.toggle('flipped');
+}
     </script>
   </body>
 </html>
