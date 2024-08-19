@@ -142,11 +142,11 @@ body {
 
 
 .front {
-  background: #fff;
+  background: transparent;
 }
 
 .back {
-  background: #fff;
+  background: transparent;
   transform: rotateY(180deg);
 }
 
