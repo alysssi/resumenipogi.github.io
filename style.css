@@ -256,6 +256,7 @@ body {
 }
 
 .service i {
+  margin-top: 10px;
   font-size: 50px;
   color: crimson;
   margin-bottom: 10px;
