@@ -1,4 +1,5 @@
 
+
 body,
 html {
   margin: 0;
@@ -103,30 +104,49 @@ body {
   perspective: 1000px;
   
  
-  
+  outline: none;
+  box-shadow: none;
+
   cursor: pointer; 
 }
+
+
 
 .pp {
   margin: 20px 0;
   height: 300px;
   width: 300px;
 
+  outline: none;
+  box-shadow: none;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
+.pic:focus {
+  outline: none; /* Ensure no outline when focused */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+.pic img {
+  outline: none; /* Remove outline from images */
+}
+
 .front, .back {
   position: absolute;
+  
 
   backface-visibility: hidden;
 }
 
 .pp:hover {
   transform: scale(1.05); /* Enlarge on hover */
+  
 }
 
 .frontimage, .backimage {
+  
+
   margin: 20px 0;
   height: 300px;
   width: 300px;
@@ -139,6 +159,12 @@ body {
 
 }
 
+.pic img:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
 
 
 .front {
@@ -150,7 +176,7 @@ body {
   transform: rotateY(180deg);
 }
 
-.pic.flipped .pp {
+.pp.flipped .pp {
   transform: rotateY(180deg);
 }
 .name h1 {
